@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CityU MSDS Semester A 2026/27 课程目录与选课评价">
+    <title>课程库 · MSDS 选课板</title>
+    <link rel="stylesheet" href="assets/styles.css?v=20260802b">
+  </head>
+  <body data-page="catalog">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="MSDS 选课板首页">
+        <span class="brand-mark">D</span>
+        <span><strong>MSDS 选课板</strong><small>Semester A · 2026/27</small></span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">课程表</a>
+        <a class="active" href="courses.html">课程库</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro catalog-intro">
+        <div>
+          <p class="eyebrow">21 门可选课程</p>
+          <h1>从时间之外，再看一层</h1>
+          <p>课表信息来自 CityU 本学期快照；难度、考勤和给分仅汇总本地收集的往届学生经验。</p>
+        </div>
+      </section>
+
+      <section class="catalog-tools" aria-label="课程筛选">
+        <label class="search-box catalog-search">
+          <span class="sr-only">搜索课程</span>
+          <input id="catalog-search" type="search" placeholder="搜索课号、课程名或教师" autocomplete="off">
+        </label>
+        <div class="filter-row" aria-label="课程标签筛选">
+          <button class="filter-pill active" type="button" data-filter="all">全部</button>
+          <button class="filter-pill" type="button" data-filter="core">必修课</button>
+          <button class="filter-pill" type="button" data-filter="strong">优先考虑</button>
+          <button class="filter-pill" type="button" data-filter="no-attendance">无考勤</button>
+          <button class="filter-pill" type="button" data-filter="no-final">无期末考</button>
+        </div>
+        <p id="catalog-result-count" class="result-count"></p>
+      </section>
+
+      <section id="catalog-grid" class="catalog-grid" aria-live="polite"></section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="assets/shared.js?v=20260802b"></script>
+    <script src="assets/catalog.js?v=20260802b"></script>
+  </body>
+</html>
