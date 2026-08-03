@@ -28,12 +28,10 @@
 
   function filterCourses() {
     return courses.filter((course) => {
-      const rec = MSDS.getRecommendation(course);
       const haystack = `${course.code} ${course.programme_title}`.toLowerCase();
       const matchesSearch = haystack.includes(searchTerm.toLowerCase());
       const matchesFilter = activeFilter === "all"
-        || course.requirement_type === activeFilter
-        || (activeFilter === "recommended" && ["strong", "good"].includes(rec.level));
+        || course.requirement_type === activeFilter;
       const primaryDays = course.eligible_sections
         .filter((section) => Number(section.credits) > 0)
         .map((section) => section.day);

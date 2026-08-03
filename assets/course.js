@@ -29,7 +29,7 @@
 
     document.title = `${course.code} ${course.programme_title} · MSDS 选课板`;
     detail.innerHTML = `
-      <a class="back-link" href="courses.html">← 返回课程库</a>
+      <a class="back-link" href="index.html">← 返回课程表</a>
       <section class="detail-hero">
         <div>
           <div class="detail-code-row">
@@ -120,7 +120,7 @@
   }
 
   if (!code) {
-    detail.innerHTML = '<div class="error-state">缺少课程编号。<br><a class="text-link" href="courses.html">返回课程库</a></div>';
+    detail.innerHTML = '<div class="error-state">缺少课程编号。<br><a class="text-link" href="index.html">返回课程表</a></div>';
     return;
   }
 
@@ -129,6 +129,6 @@
     if (!course) throw new Error("没有找到这门课程");
     renderCourse(data, course);
   }).catch((error) => {
-    detail.innerHTML = `<div class="error-state">${MSDS.escapeHtml(error.message)}<br><a class="text-link" href="courses.html">返回课程库</a></div>`;
+    detail.innerHTML = `<div class="error-state">${MSDS.escapeHtml(error.message)}<br><a class="text-link" href="index.html">返回课程表</a></div>`;
   });
 })();
