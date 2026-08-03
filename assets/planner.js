@@ -13,6 +13,13 @@
     ["#f2e4e8", "#984a63", "#77364c"]
   ];
 
+  // 首次访问时默认选中的核心课程班次
+  const DEFAULT_SELECTIONS = [
+    { code: "DSC5003", section: "C62" },
+    { code: "DSC5001", section: "C61" },
+    { code: "DSC5002", section: "C62" }
+  ];
+
   let courses = [];
   let selections = MSDS.getStoredSelections();
   let searchTerm = "";
@@ -245,6 +252,22 @@
     updateSummary();
   }
 
+  function applyDefaultSelections() {
+    const hasStored = Object.keys(selections).length > 0;
+    if (hasStored) return;
+    DEFAULT_SELECTIONS.forEach(({ code, section }) => {
+      const course = courseByCode(code);
+      if (!course || selections[code]) return;
+      const primary = course.eligible_sections.find(
+        (s) => s.section === section && Number(s.credits) > 0
+      );
+      if (primary) {
+        selections[code] = selectionForPrimary(course, MSDS.sectionKey(primary));
+      }
+    });
+    MSDS.saveSelections(selections);
+  }
+
   function selectionForPrimary(course, primaryCrn) {
     const selection = MSDS.makeDefaultSelection(course);
     if (!primaryCrn) return selection;
@@ -366,6 +389,7 @@
 
   MSDS.loadCourseData().then((data) => {
     courses = data.courses;
+    applyDefaultSelections();
     renderTimeAxis();
     bindEvents();
     renderAll();
