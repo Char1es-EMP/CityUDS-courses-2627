@@ -1,15 +1,17 @@
-﻿{
+{
   "course_code": "DSC5003",
-  "level": "unknown",
-  "verdict": "暂无评价",
-  "summary": "官方介绍为数据存储与检索基础：实体-关系建模、数据库开发过程、用 SQL 检索与存储数据，以及 Hadoop/Spark 的入门内容。本地暂未收集到往届学生评价，考核形式、教师与给分待补充。",
+  "level": "recommended",
+  "verdict": "基础友好",
+  "summary": "跟本科数据库内容一致，多了 MapReduce 概念，不需搭环境。本科学过数据库则无压力。老师严格按原始分给分，不 curve。开卷考试。",
   "tags": [
-    "关系数据库",
-    "SQL",
-    "Hadoop/Spark",
-    "数据库设计"
+    "难度简单",
+    "给分一般",
+    "开卷考试",
+    "数据库基础",
+    "不curve"
   ],
-  "source_ids": [],
-  "last_updated": "2026-08-02"
+  "source_ids": [
+    "xhs_ds_sema_gawin"
+  ],
+  "last_updated": "2026-08-03"
 }
-

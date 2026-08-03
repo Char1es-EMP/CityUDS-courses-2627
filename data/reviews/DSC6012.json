@@ -1,15 +1,18 @@
-﻿{
+{
   "course_code": "DSC6012",
-  "level": "unknown",
-  "verdict": "暂无评价",
-  "summary": "官方介绍为时间序列与递归神经网络：从随机过程与时间序列概念、ARMA 模型及其估计与预测，到 GARCH 模型，再到用于时间序列预测的递归神经网络，全程以 R 软件进行数据分析。本地暂未收集到往届学生评价，考核形式、教师与给分待补充。",
+  "level": "recommended",
+  "verdict": "给分友好",
+  "summary": "比王燕老师讲的时间序列简单，统计专业无压力。神经网络部分讲 RNN/LSTM/GRU，难度不大。作者数学一般也拿了 B+，给分友好。闭卷考试。",
   "tags": [
+    "难度适中",
+    "给分大方",
+    "闭卷考试",
     "时间序列",
-    "ARMA/GARCH",
-    "递归神经网络",
-    "R 语言"
+    "RNN/LSTM"
   ],
-  "source_ids": [],
-  "last_updated": "2026-08-02"
+  "source_ids": [
+    "xhs_ds_sema_gawin",
+    "xhs_ds_qiu_zhu"
+  ],
+  "last_updated": "2026-08-03"
 }
-
