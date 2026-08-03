@@ -104,10 +104,6 @@ body {
   min-width: 320px;
   color: var(--ink);
   background-color: var(--bg);
-  background-image:
-    radial-gradient(60% 42% at 12% -6%, var(--bg-glow-1), transparent 70%),
-    radial-gradient(50% 38% at 96% 8%, var(--bg-glow-2), transparent 70%),
-    radial-gradient(55% 42% at 55% 108%, var(--bg-glow-3), transparent 72%);
   background-attachment: fixed;
   transition: background-color 600ms ease, color 600ms ease;
 }
@@ -179,7 +175,7 @@ select:focus-visible {
   height: 40px;
   place-items: center;
   border-radius: 12px;
-  background: var(--accent-gradient);
+  background: var(--primary);
   color: white;
   font-size: 19px;
   font-weight: 900;
@@ -291,10 +287,6 @@ main {
   color: var(--ink);
   font-weight: 900;
   letter-spacing: -0.02em;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .page-intro p:not(.eyebrow) {
@@ -350,10 +342,7 @@ main {
 }
 
 .intro-stats div:last-child strong {
-  background: linear-gradient(120deg, var(--violet), #ec4899);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--violet);
 }
 
 .intro-stats span {
@@ -1458,10 +1447,7 @@ main {
   font-weight: 900;
   line-height: 1.08;
   letter-spacing: -0.02em;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--ink);
 }
 
 .detail-hero p {
