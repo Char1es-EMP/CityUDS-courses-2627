@@ -818,6 +818,30 @@ main {
   color: var(--muted);
 }
 
+.mini-badge.aims-missing,
+.verdict-badge.aims-missing {
+  background: var(--danger-soft);
+  color: var(--danger);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.course-row.is-aims-missing,
+.selected-course.is-aims-missing {
+  border-left: 2px solid var(--danger);
+}
+
+.notice.aims-missing-notice {
+  margin-bottom: 18px;
+  border-color: var(--danger);
+  background: var(--danger-soft);
+  color: var(--ink);
+}
+
+.notice.aims-missing-notice strong {
+  color: var(--danger);
+}
+
 .empty-list {
   padding: 42px 16px;
   color: var(--muted);

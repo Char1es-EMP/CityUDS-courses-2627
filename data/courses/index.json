@@ -301,7 +301,8 @@
         "capacity": "0",
         "medium": "English"
       },
-      "section_count": 0
+      "section_count": 0,
+      "aims_missing": true
     },
     {
       "code": "DSC8002",
@@ -319,7 +320,8 @@
         "capacity": "0",
         "medium": "English"
       },
-      "section_count": 0
+      "section_count": 0,
+      "aims_missing": true
     },
     {
       "code": "DSC8003",
@@ -337,7 +339,8 @@
         "capacity": "100",
         "medium": "English"
       },
-      "section_count": 1
+      "section_count": 1,
+      "aims_missing": true
     },
     {
       "code": "DSC8004",
@@ -409,7 +412,8 @@
         "capacity": "180",
         "medium": "English"
       },
-      "section_count": 2
+      "section_count": 2,
+      "aims_missing": true
     },
     {
       "code": "CS6290",
@@ -427,7 +431,8 @@
         "capacity": "120",
         "medium": "English"
       },
-      "section_count": 1
+      "section_count": 1,
+      "aims_missing": true
     },
     {
       "code": "CS6493",
@@ -445,7 +450,8 @@
         "capacity": "150",
         "medium": "English"
       },
-      "section_count": 2
+      "section_count": 2,
+      "aims_missing": true
     }
   ]
 }

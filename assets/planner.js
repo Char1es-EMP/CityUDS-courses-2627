@@ -60,12 +60,14 @@
       const primaries = course.eligible_sections.filter((item) => Number(item.credits) > 0);
       const scheduleText = primaries.map((item) => `${MSDS.DAY_NAMES[item.day]} ${item.time}`).join(" / ");
       const selectedPrimary = selections[course.code]?.primaryCrn;
+      const aimsMissingBadge = course.aims_missing ? '<span class="mini-badge aims-missing" title="该课程在当前学期 AIMS Master Class Schedule 中未找到">aims中未找到</span>' : "";
       return `
-        <article class="course-row">
+        <article class="course-row${course.aims_missing ? " is-aims-missing" : ""}">
           <div class="course-row-main">
             <div class="course-code-line">
               <span class="course-code">${MSDS.escapeHtml(course.code)}</span>
               ${course.requirement_type === "core" ? '<span class="mini-badge core">核心</span>' : MSDS.recommendationBadge(rec, true)}
+              ${aimsMissingBadge}
             </div>
             <a class="course-title-link" href="course.html?code=${encodeURIComponent(course.code)}">${MSDS.escapeHtml(course.programme_title)}</a>
             <div class="course-meta"><span>${course.credits} 学分</span><span>${primaries.length} 个主课班次</span></div>
@@ -100,10 +102,11 @@
       const selected = selections[course.code];
       const primaries = course.eligible_sections.filter((section) => Number(section.credits) > 0);
       const tutorials = course.eligible_sections.filter((section) => Number(section.credits) === 0);
+      const aimsMissingBadge = course.aims_missing ? '<span class="mini-badge aims-missing" title="该课程在当前学期 AIMS Master Class Schedule 中未找到">aims中未找到</span>' : "";
       return `
-        <article class="selected-course">
+        <article class="selected-course${course.aims_missing ? " is-aims-missing" : ""}">
           <div class="selected-course-head">
-            <div><a href="course.html?code=${encodeURIComponent(course.code)}">${MSDS.escapeHtml(course.code)}</a><small>${MSDS.escapeHtml(course.programme_title)}</small></div>
+            <div><a href="course.html?code=${encodeURIComponent(course.code)}">${MSDS.escapeHtml(course.code)}</a><small>${MSDS.escapeHtml(course.programme_title)}</small>${aimsMissingBadge}</div>
           </div>
           <div class="section-selects">
             <label>主课<select data-code="${MSDS.escapeHtml(course.code)}" data-kind="primary">${sectionOptions(primaries, selected.primaryCrn)}</select></label>

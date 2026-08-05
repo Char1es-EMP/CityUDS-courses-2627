@@ -26,6 +26,12 @@
     const instructors = [...new Set(course.eligible_sections.map((section) => section.instructor).filter(Boolean))].join("；");
     const webStatus = course.eligible_sections.some((section) => section.web === "Y") ? "有班次可网页注册" : "不可正常网页注册，请联系课程单位";
     const titleNote = course.title_changed ? `本学期课表名称：${course.schedule_title}` : "课程名称与课表一致";
+    const aimsMissingBadge = course.aims_missing
+      ? '<span class="verdict-badge aims-missing" title="该课程在当前学期 AIMS Master Class Schedule 中未找到">aims中未找到</span>'
+      : "";
+    const aimsMissingNotice = course.aims_missing
+      ? '<div class="notice aims-missing-notice"><strong>提示：</strong>该课程在当前学期（Semester A 2026/27）的 AIMS Master Class Schedule 中未找到。可能未在本学期开设、已下架或仅在不同学期提供，请以 AIMS 系统实际为准。</div>'
+      : "";
 
     document.title = `${course.code} ${course.programme_title} · MSDS 选课板`;
     detail.innerHTML = `
@@ -35,6 +41,7 @@
           <div class="detail-code-row">
             <span class="detail-code">${MSDS.escapeHtml(course.code)}</span>
             ${course.requirement_type === "core" ? '<span class="verdict-badge core">核心课</span>' : MSDS.recommendationBadge(rec)}
+            ${aimsMissingBadge}
           </div>
           <h1>${MSDS.escapeHtml(course.programme_title)}</h1>
           <p>${course.credits} 学分 · ${MSDS.escapeHtml(course.remarks)} · ${MSDS.escapeHtml(titleNote)}</p>
@@ -44,6 +51,8 @@
           <a class="button button-quiet" href="index.html">查看课表</a>
         </div>
       </section>
+
+      ${aimsMissingNotice}
 
       <div class="detail-layout">
         <div>
