@@ -286,63 +286,6 @@
       "section_count": 1
     },
     {
-      "code": "DSC8001",
-      "requirement_type": "elective",
-      "programme_title": "Seminars on Data Science I",
-      "schedule_title": "Seminars on Data Science I",
-      "title_changed": false,
-      "credits": 1,
-      "remarks": "SD",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "0",
-        "capacity": "0",
-        "medium": "English"
-      },
-      "section_count": 0,
-      "aims_missing": true
-    },
-    {
-      "code": "DSC8002",
-      "requirement_type": "elective",
-      "programme_title": "Seminars on Data Science II",
-      "schedule_title": "Seminars on Data Science II",
-      "title_changed": false,
-      "credits": 1,
-      "remarks": "SD",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "0",
-        "capacity": "0",
-        "medium": "English"
-      },
-      "section_count": 0,
-      "aims_missing": true
-    },
-    {
-      "code": "DSC8003",
-      "requirement_type": "elective",
-      "programme_title": "Machine Learning",
-      "schedule_title": "Machine Learning",
-      "title_changed": false,
-      "credits": 3,
-      "remarks": "SD",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "100",
-        "capacity": "100",
-        "medium": "English"
-      },
-      "section_count": 1,
-      "aims_missing": true
-    },
-    {
       "code": "DSC8004",
       "requirement_type": "elective",
       "programme_title": "Advanced Statistics",
@@ -395,63 +338,6 @@
         "medium": "English"
       },
       "section_count": 2
-    },
-    {
-      "code": "CS5487",
-      "requirement_type": "elective",
-      "programme_title": "Machine Learning: Principles and Practice",
-      "schedule_title": "Machine Learning: Principles and Practice",
-      "title_changed": false,
-      "credits": 3,
-      "remarks": "CC",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "180",
-        "capacity": "180",
-        "medium": "English"
-      },
-      "section_count": 2,
-      "aims_missing": true
-    },
-    {
-      "code": "CS6290",
-      "requirement_type": "elective",
-      "programme_title": "Privacy-enhancing Technologies",
-      "schedule_title": "Privacy-enhancing Technologies",
-      "title_changed": false,
-      "credits": 3,
-      "remarks": "CC",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "120",
-        "capacity": "120",
-        "medium": "English"
-      },
-      "section_count": 1,
-      "aims_missing": true
-    },
-    {
-      "code": "CS6493",
-      "requirement_type": "elective",
-      "programme_title": "Natural Language Processing",
-      "schedule_title": "Natural Language Processing",
-      "title_changed": false,
-      "credits": 3,
-      "remarks": "CC",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "150",
-        "capacity": "150",
-        "medium": "English"
-      },
-      "section_count": 2,
-      "aims_missing": true
     }
   ]
 }
