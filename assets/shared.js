@@ -46,6 +46,23 @@
     return courseDataPromise;
   }
 
+  let changelogPromise;
+
+  function loadChangelog() {
+    if (!changelogPromise) {
+      changelogPromise = fetch("data/changelog.json")
+        .then((response) => {
+          if (!response.ok) throw new Error(`数据读取失败：${response.url}`);
+          return response.json();
+        })
+        .catch((error) => {
+          changelogPromise = undefined;
+          throw error;
+        });
+    }
+    return changelogPromise;
+  }
+
   function getRecommendation(course) {
     return course?.recommendation || {
       level: "unknown",
@@ -128,6 +145,7 @@
     formatSection,
     getRecommendation,
     getStoredSelections,
+    loadChangelog,
     loadCourseData,
     makeDefaultSelection,
     recommendationBadge,

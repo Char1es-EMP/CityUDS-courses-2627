@@ -390,12 +390,37 @@
     });
   }
 
+  function renderChangelog() {
+    const container = document.getElementById("changelog-list");
+    const dateElement = document.getElementById("changelog-date");
+    if (!container) return;
+    MSDS.loadChangelog().then((data) => {
+      const entries = (data.entries || []).slice(0, 3);
+      if (data.updated_at && dateElement) {
+        dateElement.textContent = `最后更新：${data.updated_at}`;
+      }
+      container.innerHTML = entries.length
+        ? entries.map((entry) => `
+          <article class="changelog-entry">
+            <span class="changelog-entry-date">${MSDS.escapeHtml(entry.date)}</span>
+            <div class="changelog-entry-body">
+              <h3>${MSDS.escapeHtml(entry.title)}</h3>
+              <ul>${(entry.items || []).map((item) => `<li>${MSDS.escapeHtml(item)}</li>`).join("")}</ul>
+            </div>
+          </article>`).join("")
+        : '<p class="changelog-empty">暂无更新记录。</p>';
+    }).catch(() => {
+      container.innerHTML = '<p class="changelog-empty">更新日志加载失败。</p>';
+    });
+  }
+
   MSDS.loadCourseData().then((data) => {
     courses = data.courses;
     applyDefaultSelections();
     renderTimeAxis();
     bindEvents();
     renderAll();
+    renderChangelog();
   }).catch((error) => {
     listElement.innerHTML = `<div class="empty-list">${MSDS.escapeHtml(error.message)}<br>请通过本地服务器打开网站。</div>`;
   });
