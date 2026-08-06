@@ -31,7 +31,7 @@
         "capacity": "800",
         "medium": "English"
       },
-      "section_count": 3
+      "section_count": 2
     },
     {
       "code": "DSC5002",
@@ -85,7 +85,7 @@
         "capacity": "300",
         "medium": "English"
       },
-      "section_count": 5
+      "section_count": 2
     },
     {
       "code": "DSC6006",
@@ -121,7 +121,7 @@
         "capacity": "300",
         "medium": "English"
       },
-      "section_count": 2
+      "section_count": 1
     },
     {
       "code": "DSC6011",
@@ -230,96 +230,6 @@
         "medium": "English"
       },
       "section_count": 1
-    },
-    {
-      "code": "DSC6020",
-      "requirement_type": "elective",
-      "programme_title": "Artificial Intelligence for Scientific Knowledge Discovery",
-      "schedule_title": "Artificial Intelligence for Scientific Knowledge Discovery",
-      "title_changed": false,
-      "credits": 3,
-      "remarks": "SD",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "100",
-        "capacity": "300",
-        "medium": "English"
-      },
-      "section_count": 1
-    },
-    {
-      "code": "DSC6021",
-      "requirement_type": "elective",
-      "programme_title": "Generative Artificial Intelligence",
-      "schedule_title": "Generative Artificial Intelligence",
-      "title_changed": false,
-      "credits": 3,
-      "remarks": "SD",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "100",
-        "capacity": "300",
-        "medium": "English"
-      },
-      "section_count": 1
-    },
-    {
-      "code": "DSC6026",
-      "requirement_type": "elective",
-      "programme_title": "Social Network Analysis",
-      "schedule_title": "Social Network Analysis",
-      "title_changed": false,
-      "credits": 3,
-      "remarks": "SD",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "250",
-        "capacity": "250",
-        "medium": "English"
-      },
-      "section_count": 1
-    },
-    {
-      "code": "DSC8004",
-      "requirement_type": "elective",
-      "programme_title": "Advanced Statistics",
-      "schedule_title": "Advanced Statistics",
-      "title_changed": false,
-      "credits": 3,
-      "remarks": "SD",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "100",
-        "capacity": "100",
-        "medium": "English"
-      },
-      "section_count": 2
-    },
-    {
-      "code": "DSC8005",
-      "requirement_type": "elective",
-      "programme_title": "Optimization",
-      "schedule_title": "Optimization",
-      "title_changed": false,
-      "credits": 3,
-      "remarks": "SD",
-      "prerequisites": "Nil",
-      "exclusive_course": "Nil",
-      "summary": {
-        "web": "Y",
-        "available": "100",
-        "capacity": "100",
-        "medium": "English"
-      },
-      "section_count": 2
     },
     {
       "code": "CS5285",
