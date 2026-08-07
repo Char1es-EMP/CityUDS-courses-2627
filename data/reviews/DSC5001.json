@@ -2,7 +2,7 @@
   "course_code": "DSC5001",
   "level": "neutral",
   "verdict": "适中可选",
-  "summary": "没有 ML 基础也能跟上，但画图题易掉坑，树和 SVM 部分需认真学。项目很水给分挺高，但会 curve，部分同学不满意。考试有最低通过要求，闭卷考试。",
+  "summary": "没有 ML 基础也能跟上，但画图题易掉坑，树和 SVM 部分需认真学。项目很水给分挺高，但会 curve，部分同学不满意。考试有最低通过要求，闭卷考试。可选老师 Yin Max（默认 mo zhenling）。",
   "tags": [
     "难度适中",
     "给分一般",
@@ -11,7 +11,8 @@
     "会curve"
   ],
   "source_ids": [
-    "xhs_ds_sema_gawin"
+    "xhs_ds_sema_gawin",
+    "xhs_ds_tantan_xuanke"
   ],
-  "last_updated": "2026-08-03"
+  "last_updated": "2026-08-07"
 }
