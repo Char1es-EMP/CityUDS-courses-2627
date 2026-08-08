@@ -14,26 +14,29 @@
       .replaceAll("'", "&#039;");
   }
 
+  function fetchJson(url) {
+    return fetch(url).then((response) => {
+      if (!response.ok) throw new Error(`数据读取失败：${url}`);
+      return response.json();
+    });
+  }
+
   function loadCourseData() {
     if (!courseDataPromise) {
-      const getJson = (url) => fetch(url).then((response) => {
-        if (!response.ok) throw new Error(`数据读取失败：${url}`);
-        return response.json();
-      });
       courseDataPromise = Promise.all([
-        getJson("data/courses/index.json"),
-        getJson("data/sources.json")
+        fetchJson("data/courses/index.json"),
+        fetchJson("data/sources.json")
       ]).then(([index, sources]) => Promise.all([
         Promise.all(index.courses.map((course) => Promise.all([
-          getJson(`data/sections/${encodeURIComponent(course.code)}.json`),
-          getJson(`data/reviews/${encodeURIComponent(course.code)}.json`)
+          fetchJson(`data/sections/${encodeURIComponent(course.code)}.json`),
+          fetchJson(`data/reviews/${encodeURIComponent(course.code)}.json`)
         ]).then(([eligibleSections, recommendation]) => ({
           ...course,
           eligible_sections: eligibleSections,
           recommendation
         })))),
         Promise.all(Object.keys(sources).map((sourceId) =>
-          getJson(`data/source-reviews/${encodeURIComponent(sourceId)}.json`)
+          fetchJson(`data/source-reviews/${encodeURIComponent(sourceId)}.json`)
             .then((sourceReview) => [sourceId, sourceReview])
         ))
       ]).then(([courses, sourceReviewEntries]) => ({
@@ -41,7 +44,10 @@
         sources,
         sourceReviews: Object.fromEntries(sourceReviewEntries),
         courses
-      })));
+      }))).catch((error) => {
+        courseDataPromise = undefined;
+        throw error;
+      });
     }
     return courseDataPromise;
   }
@@ -50,11 +56,7 @@
 
   function loadChangelog() {
     if (!changelogPromise) {
-      changelogPromise = fetch("data/changelog.json")
-        .then((response) => {
-          if (!response.ok) throw new Error(`数据读取失败：${response.url}`);
-          return response.json();
-        })
+      changelogPromise = fetchJson("data/changelog.json")
         .catch((error) => {
           changelogPromise = undefined;
           throw error;
@@ -69,8 +71,7 @@
       verdict: "暂无评价",
       summary: "本地资料没有足够信息，暂不作判断。",
       tags: [],
-      source_ids: [],
-      sourceIds: []
+      source_ids: []
     };
   }
 
@@ -91,6 +92,14 @@
     return String(section.crn || `${section.section}-${section.day}-${section.time}`);
   }
 
+  function splitSections(course) {
+    const sections = course?.eligible_sections || [];
+    return {
+      primaries: sections.filter((section) => Number(section.credits) > 0),
+      tutorials: sections.filter((section) => Number(section.credits) === 0)
+    };
+  }
+
   function pickTutorial(primary, tutorials) {
     if (!tutorials.length) return null;
     const suffix = primary?.section?.match(/(\d+)$/)?.[1];
@@ -103,10 +112,10 @@
     return tutorials[0];
   }
 
-  function makeDefaultSelection(course) {
-    const primaries = course.eligible_sections.filter((section) => Number(section.credits) > 0);
-    const tutorials = course.eligible_sections.filter((section) => Number(section.credits) === 0);
-    const primary = primaries[0] || course.eligible_sections[0];
+  function makeDefaultSelection(course, primaryCrn) {
+    const { primaries, tutorials } = splitSections(course);
+    const requestedPrimary = primaryCrn ? findSection(course, primaryCrn) : null;
+    const primary = requestedPrimary || primaries[0] || course.eligible_sections[0];
     const tutorial = pickTutorial(primary, tutorials);
     return {
       primaryCrn: primary ? sectionKey(primary) : null,
@@ -137,10 +146,17 @@
     return `<span class="${className} ${escapeHtml(rec.level)}">${escapeHtml(rec.verdict)}</span>`;
   }
 
+  function aimsMissingBadge(course, small = false) {
+    if (!course?.aims_missing) return "";
+    const className = small ? "mini-badge" : "verdict-badge";
+    return `<span class="${className} aims-missing" title="该课程在当前学期 AIMS Master Class Schedule 中未找到">aims中未找到</span>`;
+  }
+
   window.MSDS = {
     DAY_NAMES,
     STORAGE_KEY,
     escapeHtml,
+    aimsMissingBadge,
     findSection,
     formatSection,
     getRecommendation,
@@ -151,6 +167,7 @@
     recommendationBadge,
     saveSelections,
     sectionKey,
-    showToast
+    showToast,
+    splitSections
   };
 })();

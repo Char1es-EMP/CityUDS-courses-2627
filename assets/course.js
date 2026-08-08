@@ -12,12 +12,11 @@
     const rec = MSDS.getRecommendation(course);
     const sourceStore = data.sources || {};
     const sourceReviewStore = data.sourceReviews || {};
-    const sources = (rec.source_ids || rec.sourceIds || []).map((id) => {
+    const sources = (rec.source_ids || []).map((id) => {
       const source = sourceStore[id];
       if (!source) return null;
       return {
         ...source,
-        id,
         review: sourceReviewStore[id]?.course_reviews?.[course.code] || ""
       };
     }).filter(Boolean);
@@ -26,9 +25,7 @@
     const instructors = [...new Set(course.eligible_sections.map((section) => section.instructor).filter(Boolean))].join("；");
     const webStatus = course.eligible_sections.some((section) => section.web === "Y") ? "有班次可网页注册" : "不可正常网页注册，请联系课程单位";
     const titleNote = course.title_changed ? `本学期课表名称：${course.schedule_title}` : "课程名称与课表一致";
-    const aimsMissingBadge = course.aims_missing
-      ? '<span class="verdict-badge aims-missing" title="该课程在当前学期 AIMS Master Class Schedule 中未找到">aims中未找到</span>'
-      : "";
+    const aimsMissingBadge = MSDS.aimsMissingBadge(course);
     const aimsMissingNotice = course.aims_missing
       ? '<div class="notice aims-missing-notice"><strong>提示：</strong>该课程在当前学期（Semester A 2026/27）的 AIMS Master Class Schedule 中未找到。可能未在本学期开设、已下架或仅在不同学期提供，请以 AIMS 系统实际为准。</div>'
       : "";

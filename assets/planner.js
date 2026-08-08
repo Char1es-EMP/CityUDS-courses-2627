@@ -39,9 +39,7 @@
       const matchesSearch = haystack.includes(searchTerm.toLowerCase());
       const matchesFilter = activeFilter === "all"
         || course.requirement_type === activeFilter;
-      const primaryDays = course.eligible_sections
-        .filter((section) => Number(section.credits) > 0)
-        .map((section) => section.day);
+      const primaryDays = MSDS.splitSections(course).primaries.map((section) => section.day);
       const matchesDay = activeDay === "all" || primaryDays.includes(activeDay);
       return matchesSearch && matchesFilter && matchesDay;
     });
@@ -57,10 +55,10 @@
     listElement.innerHTML = filtered.map((course) => {
       const rec = MSDS.getRecommendation(course);
       const isAdded = Boolean(selections[course.code]);
-      const primaries = course.eligible_sections.filter((item) => Number(item.credits) > 0);
+      const { primaries } = MSDS.splitSections(course);
       const scheduleText = primaries.map((item) => `${MSDS.DAY_NAMES[item.day]} ${item.time}`).join(" / ");
       const selectedPrimary = selections[course.code]?.primaryCrn;
-      const aimsMissingBadge = course.aims_missing ? '<span class="mini-badge aims-missing" title="该课程在当前学期 AIMS Master Class Schedule 中未找到">aims中未找到</span>' : "";
+      const aimsMissingBadge = MSDS.aimsMissingBadge(course, true);
       return `
         <article class="course-row${course.aims_missing ? " is-aims-missing" : ""}">
           <div class="course-row-main">
@@ -92,7 +90,7 @@
   }
 
   function renderSelectedList() {
-    const selectedCourses = courses.filter((course) => selections[course.code]);
+    const selectedCourses = getSelectedCourses();
     if (!selectedCourses.length) {
       selectedListElement.innerHTML = '<div class="empty-list"><strong>还没有课程</strong><br>回到“浏览课程”开始排课</div>';
       return;
@@ -100,9 +98,8 @@
 
     selectedListElement.innerHTML = selectedCourses.map((course) => {
       const selected = selections[course.code];
-      const primaries = course.eligible_sections.filter((section) => Number(section.credits) > 0);
-      const tutorials = course.eligible_sections.filter((section) => Number(section.credits) === 0);
-      const aimsMissingBadge = course.aims_missing ? '<span class="mini-badge aims-missing" title="该课程在当前学期 AIMS Master Class Schedule 中未找到">aims中未找到</span>' : "";
+      const { primaries, tutorials } = MSDS.splitSections(course);
+      const aimsMissingBadge = MSDS.aimsMissingBadge(course, true);
       return `
         <article class="selected-course${course.aims_missing ? " is-aims-missing" : ""}">
           <div class="selected-course-head">
@@ -117,7 +114,7 @@
   }
 
   function renderSelectedChips() {
-    const selectedCourses = courses.filter((course) => selections[course.code]);
+    const selectedCourses = getSelectedCourses();
     const container = document.getElementById("selected-chips");
     if (!selectedCourses.length) {
       container.innerHTML = '<span class="selected-chips-empty">加入课程后，可点击课表块查看详情</span>';
@@ -133,6 +130,10 @@
   function minutes(time) {
     const [hours, mins] = time.split(":").map(Number);
     return hours * 60 + mins;
+  }
+
+  function getSelectedCourses() {
+    return courses.filter((course) => selections[course.code]);
   }
 
   function selectedEvents() {
@@ -232,7 +233,7 @@
   }
 
   function updateSummary() {
-    const selectedCourses = courses.filter((course) => selections[course.code]);
+    const selectedCourses = getSelectedCourses();
     const coreCourses = selectedCourses.filter((course) => course.requirement_type === "core");
     const electiveCourses = selectedCourses.filter((course) => course.requirement_type === "elective");
     const sumCredits = (items) => items.reduce((sum, course) => sum + Number(course.credits || 0), 0);
@@ -265,23 +266,10 @@
         (s) => s.section === section && Number(s.credits) > 0
       );
       if (primary) {
-        selections[code] = selectionForPrimary(course, MSDS.sectionKey(primary));
+        selections[code] = MSDS.makeDefaultSelection(course, MSDS.sectionKey(primary));
       }
     });
     MSDS.saveSelections(selections);
-  }
-
-  function selectionForPrimary(course, primaryCrn) {
-    const selection = MSDS.makeDefaultSelection(course);
-    if (!primaryCrn) return selection;
-    selection.primaryCrn = primaryCrn;
-    const tutorials = course.eligible_sections.filter((section) => Number(section.credits) === 0);
-    const matching = MSDS.makeDefaultSelection({
-      ...course,
-      eligible_sections: [MSDS.findSection(course, primaryCrn), ...tutorials].filter(Boolean)
-    });
-    selection.tutorialCrn = matching.tutorialCrn;
-    return selection;
   }
 
   function toggleCourse(code, primaryCrn) {
@@ -291,7 +279,7 @@
       delete selections[code];
       MSDS.showToast(`已移除 ${code}`);
     } else {
-      selections[code] = selectionForPrimary(course, primaryCrn);
+      selections[code] = MSDS.makeDefaultSelection(course, primaryCrn);
       MSDS.showToast(`已加入 ${code}`);
     }
     renderAll();
@@ -344,7 +332,7 @@
       const select = event.target.closest("[data-quick-section]");
       if (!select || !selections[select.dataset.quickSection]) return;
       const course = courseByCode(select.dataset.quickSection);
-      selections[course.code] = selectionForPrimary(course, select.value);
+      selections[course.code] = MSDS.makeDefaultSelection(course, select.value);
       renderAll();
       MSDS.showToast(`已切换 ${course.code} 班次`);
     });
@@ -356,7 +344,7 @@
       const course = courseByCode(code);
       if (!course || !selections[code]) return;
       if (select.dataset.kind === "primary") {
-        selections[code] = selectionForPrimary(course, select.value);
+        selections[code] = MSDS.makeDefaultSelection(course, select.value);
       } else {
         selections[code].tutorialCrn = select.value || null;
       }
