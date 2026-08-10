@@ -800,7 +800,9 @@ main {
 .mini-badge.strong,
 .mini-badge.good,
 .verdict-badge.strong,
-.verdict-badge.good {
+.verdict-badge.good,
+.mini-badge.recommended,
+.verdict-badge.recommended {
   background: var(--ok-soft);
   color: var(--ok);
 }
@@ -815,6 +817,12 @@ main {
 .verdict-badge.caution {
   background: var(--warning-soft);
   color: var(--warning);
+}
+
+.mini-badge.neutral,
+.verdict-badge.neutral {
+  background: var(--info-soft);
+  color: var(--info);
 }
 
 .mini-badge.unknown,
