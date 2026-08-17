@@ -56,7 +56,7 @@
           <section class="detail-section">
             <h2>课程介绍</h2>
             ${course.description
-              ? `<div class="course-description">${MSDS.escapeHtml(course.description)}</div>`
+              ? `<div class="course-description">${MSDS.escapeHtml(course.description)}${course.description_zh ? `<div class="course-description-zh">${MSDS.escapeHtml(course.description_zh)}</div>` : ""}</div>`
               : '<div class="notice source-empty">官网暂未提供该课程大纲 PDF 介绍。</div>'}
             <p class="description-source-note">课程介绍摘录自 CityU 官方课程大纲 PDF（Abstract 原文，未改写）。
               <a href="https://www.cityu.edu.hk/catalogue/pg/current/course/${MSDS.escapeHtml(course.code.replace("DSC", "SDSC"))}.htm" target="_blank" rel="noreferrer">查看官网课程详情</a>

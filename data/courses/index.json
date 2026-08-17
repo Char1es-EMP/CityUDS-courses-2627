@@ -32,7 +32,8 @@
         "medium": "English"
       },
       "section_count": 2,
-      "description": "This course focuses on the theoretical foundation and fundamental methods in statistical machine learning, covering the key concepts of the probability theory and statistical inference for machine learning, classical and cutting-edge methods and theories for regression and classiﬁcation, and popular methods for unsupervised learning."
+      "description": "This course focuses on the theoretical foundation and fundamental methods in statistical machine learning, covering the key concepts of the probability theory and statistical inference for machine learning, classical and cutting-edge methods and theories for regression and classiﬁcation, and popular methods for unsupervised learning.",
+      "description_zh": "本课程聚焦统计机器学习中的理论基础与基本方法，涵盖机器学习所需的概率论与统计推断关键概念、回归与分类的经典及前沿方法与理论，以及流行的无监督学习方法。"
     },
     {
       "code": "DSC5002",
@@ -51,7 +52,8 @@
         "medium": "English"
       },
       "section_count": 2,
-      "description": "The goal of this course is to introduce students to the essential exploratory techniques for summarizing data and associated visual methods. Exploratory data analysis is typically applied before formal modelling commences. It can help formulate hypotheses and inform the development of more complex statistical models. The course begins with an introduction of basic graphical techniques used in exploratory data analysis, continues with typical statistical methods for exploratory analysis including clustering and dimension reduction techniques that allow you to make graphical displays of high dimensional data, then focuses on visualization techniques and methods for a broad range of data types. Principles from perception will be introduced to design eﬀective data visualizations. Students will work through a series of case studies and hands-on projects to learn the skills for working with real-world data."
+      "description": "The goal of this course is to introduce students to the essential exploratory techniques for summarizing data and associated visual methods. Exploratory data analysis is typically applied before formal modelling commences. It can help formulate hypotheses and inform the development of more complex statistical models. The course begins with an introduction of basic graphical techniques used in exploratory data analysis, continues with typical statistical methods for exploratory analysis including clustering and dimension reduction techniques that allow you to make graphical displays of high dimensional data, then focuses on visualization techniques and methods for a broad range of data types. Principles from perception will be introduced to design eﬀective data visualizations. Students will work through a series of case studies and hands-on projects to learn the skills for working with real-world data.",
+      "description_zh": "本课程旨在向学生介绍汇总数据及其可视化方法所需的基本探索性分析技术。探索性数据分析通常在正式建模之前进行，有助于形成假设，并为构建更复杂的统计模型提供依据。课程首先介绍探索性数据分析中用到的基础图形技术，接着讲解用于探索性分析的典型统计方法，包括聚类与降维技术——这些技术使您能够对高维数据进行图形化展示，随后聚焦于面向广泛数据类型（多种类型）的可视化技术和方法。课程还将引入感知原理以设计高效的数据可视化。学生将通过一系列案例研究与动手项目，掌握处理真实世界数据的技能。"
     },
     {
       "code": "DSC5003",
@@ -70,7 +72,8 @@
         "medium": "English"
       },
       "section_count": 2,
-      "description": "This course oﬀers knowledge of the relational database and an introduction to Hadoop/Spark system including the entity- relationship model for designing the relational database, principles of the database development process, the Structural Query Language for retrieving and storing data via a database, and the introductory level Hadoop/Spark content."
+      "description": "This course oﬀers knowledge of the relational database and an introduction to Hadoop/Spark system including the entity- relationship model for designing the relational database, principles of the database development process, the Structural Query Language for retrieving and storing data via a database, and the introductory level Hadoop/Spark content.",
+      "description_zh": "本课程讲授关系数据库知识，并介绍 Hadoop/Spark 系统，内容包括用于设计关系数据库的实体—关系模型、数据库开发过程的基本原理、通过数据库检索和存储数据的结构化查询语言（SQL），以及入门级的 Hadoop/Spark 内容。"
     },
     {
       "code": "DSC6004",
@@ -89,7 +92,8 @@
         "medium": "English"
       },
       "section_count": 2,
-      "description": "Modern cities depend on data ﬂows that connect users and infrastructure. Thus, data science skills are critical for design and operation of smart cities. The abundance of data, and statistical analysis and machine learning algorithms for utilizing the data are expected to signiﬁcantly improve decisions about how urban infrastructure and its environment are maintained and built. Students in this course will learn basic, readily applicable data analytics, statistical methods, and machine learning algorithms that are useful for exploiting data obtained via crowd-sensing and remote sensing technologies within transportation, environmental, building, and power grids systems. Student will be exposed to four knowledge modules: mobility and transportation, building energy systems, extreme events and urban resilience, and climate change and environmental variability. Throughout the course, students will gain the ability of leveraging real data to solve smart city application problems via basic statistics and machine learning techniques."
+      "description": "Modern cities depend on data ﬂows that connect users and infrastructure. Thus, data science skills are critical for design and operation of smart cities. The abundance of data, and statistical analysis and machine learning algorithms for utilizing the data are expected to signiﬁcantly improve decisions about how urban infrastructure and its environment are maintained and built. Students in this course will learn basic, readily applicable data analytics, statistical methods, and machine learning algorithms that are useful for exploiting data obtained via crowd-sensing and remote sensing technologies within transportation, environmental, building, and power grids systems. Student will be exposed to four knowledge modules: mobility and transportation, building energy systems, extreme events and urban resilience, and climate change and environmental variability. Throughout the course, students will gain the ability of leveraging real data to solve smart city application problems via basic statistics and machine learning techniques.",
+      "description_zh": "现代城市依赖连接用户与基础设施的数据流，因此数据科学技能对智慧城市的设计与运营至关重要。海量数据以及利用这些数据的统计分析与机器学习算法，有望显著改善城市基础设施及其环境的建设与维护决策。本课程学生将学习基础且易于应用的数据分析、统计方法以及机器学习算法，这些技术可用于挖掘通过众包感知与遥感技术获取的数据，并应用于交通、环境、建筑与电网等系统。学生将接触四大知识模块：出行与交通、建筑能源系统、极端事件与城市韧性、气候变化与环境变异性。整个课程中，学生将获得利用真实数据、通过基础统计与机器学习技术解决智慧城市应用问题的能力。"
     },
     {
       "code": "DSC6006",
@@ -108,7 +112,8 @@
         "medium": "English"
       },
       "section_count": 0,
-      "description": "This course aims to develop a student's expertise in his/her chosen subject area through application of data science knowledge and techniques and demonstrate a student's ability to present and organize subject knowledge scholarly in an independent research."
+      "description": "This course aims to develop a student's expertise in his/her chosen subject area through application of data science knowledge and techniques and demonstrate a student's ability to present and organize subject knowledge scholarly in an independent research.",
+      "description_zh": "本课程旨在通过应用数据科学知识与技术，培养学生在其所选学科领域的专长，并展示学生以独立研究的方式学术性地呈现和组织学科知识的能力。"
     },
     {
       "code": "DSC6008",
@@ -127,7 +132,8 @@
         "medium": "English"
       },
       "section_count": 1,
-      "description": "The aim of this course is to provide students with an understanding of design of experiments and regression methods, to develop their abilities to design and analyse physical and computer experiments, and to impress on them the value of such systematic approaches. Experimental designs for physical and computer experiments such as orthogonal arrays and space-ﬁlling designs will be introduced, and students will learn how and when to use these designs. The course will develop students' grasp of fundamental regression techniques for analysing data from physical experiments, which include linear models, least squares method, analysis of variance, and model selection approaches, and their ability to apply these techniques. In addition, students will learn to apply Gaussian process models for approximating highly nonlinear functional relationships from computer experiments."
+      "description": "The aim of this course is to provide students with an understanding of design of experiments and regression methods, to develop their abilities to design and analyse physical and computer experiments, and to impress on them the value of such systematic approaches. Experimental designs for physical and computer experiments such as orthogonal arrays and space-ﬁlling designs will be introduced, and students will learn how and when to use these designs. The course will develop students' grasp of fundamental regression techniques for analysing data from physical experiments, which include linear models, least squares method, analysis of variance, and model selection approaches, and their ability to apply these techniques. In addition, students will learn to apply Gaussian process models for approximating highly nonlinear functional relationships from computer experiments.",
+      "description_zh": "本课程旨在让学生理解试验设计与回归方法，培养他们设计与分析物理试验和计算机试验的能力，并让他们认识到此类系统性方法的价值。课程将介绍用于物理试验和计算机试验的试验设计，如正交阵列与空间填充设计，学生将学会如何以及何时使用这些设计。课程将培养学生的基本回归技术能力，用于分析物理试验数据，包括线性模型、最小二乘法、方差分析与模型选择方法，以及应用这些技术的能力。此外，学生还将学习应用高斯过程模型，从计算机试验中逼近高度非线性的函数关系。"
     },
     {
       "code": "DSC6011",
@@ -146,7 +152,8 @@
         "medium": "English"
       },
       "section_count": 1,
-      "description": "This course oﬀers an introduction to optimization methods with applications in data science. A basic understanding of Calculus and Linear Algebra are assumed. We will introduce the theoretical foundation and the fundamental algorithms for optimization and advanced optimization methods for practical problems arising in data science and machine learning applications. Course content includes convex analysis, Lagrangian duality theory, linear and nonlinear programming, conic programming, etc."
+      "description": "This course oﬀers an introduction to optimization methods with applications in data science. A basic understanding of Calculus and Linear Algebra are assumed. We will introduce the theoretical foundation and the fundamental algorithms for optimization and advanced optimization methods for practical problems arising in data science and machine learning applications. Course content includes convex analysis, Lagrangian duality theory, linear and nonlinear programming, conic programming, etc.",
+      "description_zh": "本课程介绍优化方法及其在数据科学中的应用，前提是具备微积分与线性代数的基本知识。我们将介绍优化的理论基础与基本算法，以及用于数据科学和机器学习应用中出现实际问题的先进优化方法。课程内容包括凸分析、拉格朗日对偶理论、线性与非线性规划、锥规划等。"
     },
     {
       "code": "DSC6012",
@@ -165,7 +172,8 @@
         "medium": "English"
       },
       "section_count": 1,
-      "description": "In macroeconomics and other areas of business, science, and engineering a lot of data is available as time series data sets. In this course, students will study the statistical tools that are used to analyse such data and apply them to real world data with the help of the statistical software R. First, students will engage in reviewing basic stochastic process and time series concepts. Then, they will expand their knowledge on ARMA models together with estimation methods for the models and properties of their forecasts, as well as the GARCH model for modelling variation in error variances. Second, students will engage in recurrent neural networks for time series forecast. Throughout the course, students will focus on analysis of data using the taught methods with R software."
+      "description": "In macroeconomics and other areas of business, science, and engineering a lot of data is available as time series data sets. In this course, students will study the statistical tools that are used to analyse such data and apply them to real world data with the help of the statistical software R. First, students will engage in reviewing basic stochastic process and time series concepts. Then, they will expand their knowledge on ARMA models together with estimation methods for the models and properties of their forecasts, as well as the GARCH model for modelling variation in error variances. Second, students will engage in recurrent neural networks for time series forecast. Throughout the course, students will focus on analysis of data using the taught methods with R software.",
+      "description_zh": "在宏观经济学以及商业、科学与工程等其他领域中，大量数据以时间序列数据集的形式存在。在本课程中，学生将学习用于分析此类数据的统计工具，并借助统计软件 R 将其应用于真实世界数据。首先，学生将复习随机过程与时间序列的基本概念；随后将扩展对 ARMA 模型、模型估计方法及预测性质的知识，以及用于刻画误差方差波动的 GARCH 模型。其次，学生将学习用于时间序列预测的循环神经网络。整个课程中，学生将专注于使用 R 软件运用所学方法分析数据。"
     },
     {
       "code": "DSC6013",
@@ -184,7 +192,8 @@
         "medium": "English"
       },
       "section_count": 1,
-      "description": "Innovation of technologies are transforming the ﬁnancial services industry disruptively in realms of consumer ﬁnancial services, including mobile payments, foreign exchange, marketplace lending, saving and investing, ﬁnancial advice (robo- advisers), and personalized insurance. This course aims to understand the economic and technological forces driving this change in areas such aspayments, ﬁnancing, investments, and insurance. We will ﬁrst review fundamental concepts and models of ﬁnancial engineering, and then centre around selected cases with industrial applications and study selected academic papers in order to understand the underlying economics, the technology, and the research matters. The course intends to be interactive, including classroom discussion, lectured cases, group projects, and possibly guest speakers."
+      "description": "Innovation of technologies are transforming the ﬁnancial services industry disruptively in realms of consumer ﬁnancial services, including mobile payments, foreign exchange, marketplace lending, saving and investing, ﬁnancial advice (robo- advisers), and personalized insurance. This course aims to understand the economic and technological forces driving this change in areas such aspayments, ﬁnancing, investments, and insurance. We will ﬁrst review fundamental concepts and models of ﬁnancial engineering, and then centre around selected cases with industrial applications and study selected academic papers in order to understand the underlying economics, the technology, and the research matters. The course intends to be interactive, including classroom discussion, lectured cases, group projects, and possibly guest speakers.",
+      "description_zh": "技术革新正在颠覆性地改变金融服务业在消费金融服务领域的形态，包括移动支付、外汇兑换、市场借贷、储蓄与投资、金融咨询（智能投顾）以及个性化保险等。本课程旨在理解推动支付、融资、投资与保险等领域这一变革的经济与技术力量。我们将首先回顾金融工程的基本概念与模型，然后围绕具有产业应用的精选案例，并研读部分学术论文，以理解其背后的经济学、技术以及研究议题。本课程旨在互动式教学，包括课堂讨论、案例讲解、小组项目，并可能邀请嘉宾演讲。"
     },
     {
       "code": "DSC6016",
@@ -203,7 +212,8 @@
         "medium": "English"
       },
       "section_count": 1,
-      "description": "This course focuses on the application of predictive analytics to ﬁnancial data. We will review some central tools used in economic and ﬁnancial forecasting, including predictive regressions, time series models, variable and model selection, forecast combinations, shrinkage methods, and vector autoregression. We will explore how these tools can be applied to predict the returns to ﬁnancial assets, including global equities and commodities, paying special attention to the diﬀerent types of forecasts - point forecast, interval forecast, or density forecast. We will also introduce modern predictive methods, such as penalized regressions and neural networks, and their applications to making predictions in ﬁnancial markets. Students are expected to gain working knowledge of how to apply predictive analytics to economics and ﬁnancial problems."
+      "description": "This course focuses on the application of predictive analytics to ﬁnancial data. We will review some central tools used in economic and ﬁnancial forecasting, including predictive regressions, time series models, variable and model selection, forecast combinations, shrinkage methods, and vector autoregression. We will explore how these tools can be applied to predict the returns to ﬁnancial assets, including global equities and commodities, paying special attention to the diﬀerent types of forecasts - point forecast, interval forecast, or density forecast. We will also introduce modern predictive methods, such as penalized regressions and neural networks, and their applications to making predictions in ﬁnancial markets. Students are expected to gain working knowledge of how to apply predictive analytics to economics and ﬁnancial problems.",
+      "description_zh": "本课程聚焦预测分析在金融数据中的应用。我们将回顾经济与金融预测中使用的一些核心工具，包括预测回归、时间序列模型、变量与模型选择、预测组合、收缩方法以及向量自回归。我们将探讨如何运用这些工具预测金融资产的收益，包括全球股票与大宗商品，并特别关注不同类型的预测——点预测、区间预测或密度预测。我们还将介绍现代预测方法，如惩罚回归与神经网络，及其在金融市场预测中的应用。学生将掌握将预测分析应用于经济与金融问题的实用知识。"
     },
     {
       "code": "DSC6017",
@@ -222,7 +232,8 @@
         "medium": "English"
       },
       "section_count": 0,
-      "description": "In this course, each student will work in an industrial/research setting under the joint supervision of a CityUHK faculty member and an external industry/research supervisor* at a local/overseas host institution. Each student will gain hands- on experience in tackling challenging data science problems in an industry/business/research area of his/her choice. Speciﬁcally, this course aims to cultivate each student's ability to independently formulate and solve real data science problems in an application area of his/her choice, and it also aims to develop each student's data science skills and knowledge further in the application area of his/her choice. The course provides a platform for students to demonstrate their ability to innovatively apply data science theories and methods they learnt in classrooms, or develop new data science theories and methods to solve complex real-world problems. Students are expected to independently apply or develop advanced data science theories and methods to solve signiﬁcant real-world problems in the course. *If the internship position is an internal one (i.e., at CityUHK), then an external industry/research supervisor is not needed."
+      "description": "In this course, each student will work in an industrial/research setting under the joint supervision of a CityUHK faculty member and an external industry/research supervisor* at a local/overseas host institution. Each student will gain hands- on experience in tackling challenging data science problems in an industry/business/research area of his/her choice. Speciﬁcally, this course aims to cultivate each student's ability to independently formulate and solve real data science problems in an application area of his/her choice, and it also aims to develop each student's data science skills and knowledge further in the application area of his/her choice. The course provides a platform for students to demonstrate their ability to innovatively apply data science theories and methods they learnt in classrooms, or develop new data science theories and methods to solve complex real-world problems. Students are expected to independently apply or develop advanced data science theories and methods to solve signiﬁcant real-world problems in the course. *If the internship position is an internal one (i.e., at CityUHK), then an external industry/research supervisor is not needed.",
+      "description_zh": "在本课程中，每位学生将在香港城市大学（CityUHK）教师与当地/海外主办机构外部行业/研究导师的共同指导下，在行业/研究环境中工作。每位学生将在其选择感兴趣的行业/商业/研究领域获得处理具有挑战性的数据科学问题的实践经验。具体而言，本课程旨在培养学生独立构思并解决其在所选应用领域中真实数据科学问题的能力，并进一步拓展学生在所选应用领域的数据科学技能与知识。课程为学生提供平台，展示其创新性地应用课堂上所学的数据科学理论与方法，或开发新的数据科学理论与方法来解决复杂现实问题的能力。学生应独立应用或开发先进的数据科学理论与方法，解决课程中重要的现实问题。*若实习职位为内部职位（即在 CityUHK），则无需外部行业/研究导师。"
     },
     {
       "code": "DSC6018",
@@ -241,7 +252,8 @@
         "medium": "English"
       },
       "section_count": 1,
-      "description": "In this course, students will analyze various types of medical and healthcare data using advanced analytical techniques. Key topics include healthcare data structures, medical image analysis, text analysis of clinical documents, trial data analysis, claims data, electronic health record (EHR) analysis, wearable device data processing, and health economics. Students will explore a range of statistical and computational methods, including machine learning, natural language processing, and predictive modeling, to extract meaningful insights from complex datasets. Real-world case studies will be utilized to demonstrate the practical applications of these methods in medicine and public health. By the end of the course, students will have developed the skills necessary to eﬀectively analyze medical data, interpret results, and apply methodologies across various healthcare domains, enabling them to address pressing challenges in the ﬁeld."
+      "description": "In this course, students will analyze various types of medical and healthcare data using advanced analytical techniques. Key topics include healthcare data structures, medical image analysis, text analysis of clinical documents, trial data analysis, claims data, electronic health record (EHR) analysis, wearable device data processing, and health economics. Students will explore a range of statistical and computational methods, including machine learning, natural language processing, and predictive modeling, to extract meaningful insights from complex datasets. Real-world case studies will be utilized to demonstrate the practical applications of these methods in medicine and public health. By the end of the course, students will have developed the skills necessary to eﬀectively analyze medical data, interpret results, and apply methodologies across various healthcare domains, enabling them to address pressing challenges in the ﬁeld.",
+      "description_zh": "在本课程中，学生将运用先进分析技术分析各种类型的医疗与健康数据。关键主题包括医疗数据结构、医学影像分析、临床文档文本分析、临床试验数据分析、理赔数据、电子健康记录（EHR）分析、可穿戴设备数据处理与卫生经济学。学生将探索一系列统计与计算方法，包括机器学习、自然语言处理与预测建模，以从复杂数据集中提取有意义的见解。课程将利用真实世界案例研究，展示这些方法在医学与公共卫生中的实际应用。课程结束时，学生将具备有效分析医疗数据、解读结果以及在各种医疗领域应用方法论所需的技能，从而能够应对该领域紧迫的挑战。"
     },
     {
       "code": "CS5285",
@@ -260,7 +272,8 @@
         "medium": "English"
       },
       "section_count": 2,
-      "description": "The course aims to provide an understanding of cybersecurity, giving an overview of the requirements and means for the protection of information and transactions, which is an essential feature in the design of any system. The course also examines a range of security considerations and design issues that are incorporated into the design, development and management of secure systems, including systems for eCommerce."
+      "description": "The course aims to provide an understanding of cybersecurity, giving an overview of the requirements and means for the protection of information and transactions, which is an essential feature in the design of any system. The course also examines a range of security considerations and design issues that are incorporated into the design, development and management of secure systems, including systems for eCommerce.",
+      "description_zh": "本课程旨在让学生理解网络安全，概述保护信息与交易的需求和手段——这是任何系统设计中必不可少的要素。课程还审视了一系列安全性考量与设计问题，这些问题被纳入安全系统的设计、开发与管理之中，包括电子商务系统。"
     }
   ],
   "description_source": {

@@ -1694,6 +1694,15 @@ main {
   -webkit-backdrop-filter: blur(10px);
 }
 
+.course-description-zh {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--hairline);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
 .description-source-note {
   margin: 10px 0 0;
   color: var(--muted);
