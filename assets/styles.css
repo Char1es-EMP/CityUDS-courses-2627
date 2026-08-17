@@ -653,6 +653,17 @@ main {
   font-size: 11px;
 }
 
+.course-description {
+  display: -webkit-box;
+  margin-top: 5px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 .course-schedule {
   display: -webkit-box;
   margin-top: 6px;
@@ -1668,6 +1679,31 @@ main {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.8;
+}
+
+.course-description {
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--card-strong);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.75;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.description-source-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.description-source-note a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .detail-tags {

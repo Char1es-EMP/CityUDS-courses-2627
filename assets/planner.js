@@ -69,6 +69,7 @@
             </div>
             <a class="course-title-link" href="course.html?code=${encodeURIComponent(course.code)}">${MSDS.escapeHtml(course.programme_title)}</a>
             <div class="course-meta"><span>${course.credits} 学分</span><span>${primaries.length} 个主课班次</span></div>
+            ${course.description ? `<div class="course-description" title="${MSDS.escapeHtml(course.description)}">${MSDS.escapeHtml(course.description.length > 70 ? course.description.slice(0, 70) + "…" : course.description)}</div>` : ""}
             <div class="course-schedule" title="${MSDS.escapeHtml(scheduleText)}">${MSDS.escapeHtml(scheduleText)}</div>
             <div class="course-preview" aria-label="${MSDS.escapeHtml(course.code)} 课程预览">
               <p>${MSDS.escapeHtml(rec.summary)}</p>

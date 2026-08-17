@@ -31,7 +31,8 @@
         "capacity": "800",
         "medium": "English"
       },
-      "section_count": 2
+      "section_count": 2,
+      "description": "This course focuses on the theoretical foundation and fundamental methods in statistical machine learning, covering the key concepts of the probability theory and statistical inference for machine learning, classical and cutting-edge methods and theories for regression and classiﬁcation, and popular methods for unsupervised learning."
     },
     {
       "code": "DSC5002",
@@ -49,7 +50,8 @@
         "capacity": "500",
         "medium": "English"
       },
-      "section_count": 2
+      "section_count": 2,
+      "description": "The goal of this course is to introduce students to the essential exploratory techniques for summarizing data and associated visual methods. Exploratory data analysis is typically applied before formal modelling commences. It can help formulate hypotheses and inform the development of more complex statistical models. The course begins with an introduction of basic graphical techniques used in exploratory data analysis, continues with typical statistical methods for exploratory analysis including clustering and dimension reduction techniques that allow you to make graphical displays of high dimensional data, then focuses on visualization techniques and methods for a broad range of data types. Principles from perception will be introduced to design eﬀective data visualizations. Students will work through a series of case studies and hands-on projects to learn the skills for working with real-world data."
     },
     {
       "code": "DSC5003",
@@ -67,7 +69,8 @@
         "capacity": "500",
         "medium": "English"
       },
-      "section_count": 2
+      "section_count": 2,
+      "description": "This course oﬀers knowledge of the relational database and an introduction to Hadoop/Spark system including the entity- relationship model for designing the relational database, principles of the database development process, the Structural Query Language for retrieving and storing data via a database, and the introductory level Hadoop/Spark content."
     },
     {
       "code": "DSC6004",
@@ -85,7 +88,8 @@
         "capacity": "300",
         "medium": "English"
       },
-      "section_count": 2
+      "section_count": 2,
+      "description": "Modern cities depend on data ﬂows that connect users and infrastructure. Thus, data science skills are critical for design and operation of smart cities. The abundance of data, and statistical analysis and machine learning algorithms for utilizing the data are expected to signiﬁcantly improve decisions about how urban infrastructure and its environment are maintained and built. Students in this course will learn basic, readily applicable data analytics, statistical methods, and machine learning algorithms that are useful for exploiting data obtained via crowd-sensing and remote sensing technologies within transportation, environmental, building, and power grids systems. Student will be exposed to four knowledge modules: mobility and transportation, building energy systems, extreme events and urban resilience, and climate change and environmental variability. Throughout the course, students will gain the ability of leveraging real data to solve smart city application problems via basic statistics and machine learning techniques."
     },
     {
       "code": "DSC6006",
@@ -103,7 +107,8 @@
         "capacity": "0",
         "medium": "English"
       },
-      "section_count": 0
+      "section_count": 0,
+      "description": "This course aims to develop a student's expertise in his/her chosen subject area through application of data science knowledge and techniques and demonstrate a student's ability to present and organize subject knowledge scholarly in an independent research."
     },
     {
       "code": "DSC6008",
@@ -121,7 +126,8 @@
         "capacity": "300",
         "medium": "English"
       },
-      "section_count": 1
+      "section_count": 1,
+      "description": "The aim of this course is to provide students with an understanding of design of experiments and regression methods, to develop their abilities to design and analyse physical and computer experiments, and to impress on them the value of such systematic approaches. Experimental designs for physical and computer experiments such as orthogonal arrays and space-ﬁlling designs will be introduced, and students will learn how and when to use these designs. The course will develop students' grasp of fundamental regression techniques for analysing data from physical experiments, which include linear models, least squares method, analysis of variance, and model selection approaches, and their ability to apply these techniques. In addition, students will learn to apply Gaussian process models for approximating highly nonlinear functional relationships from computer experiments."
     },
     {
       "code": "DSC6011",
@@ -139,7 +145,8 @@
         "capacity": "190",
         "medium": "English"
       },
-      "section_count": 1
+      "section_count": 1,
+      "description": "This course oﬀers an introduction to optimization methods with applications in data science. A basic understanding of Calculus and Linear Algebra are assumed. We will introduce the theoretical foundation and the fundamental algorithms for optimization and advanced optimization methods for practical problems arising in data science and machine learning applications. Course content includes convex analysis, Lagrangian duality theory, linear and nonlinear programming, conic programming, etc."
     },
     {
       "code": "DSC6012",
@@ -157,7 +164,8 @@
         "capacity": "250",
         "medium": "English"
       },
-      "section_count": 1
+      "section_count": 1,
+      "description": "In macroeconomics and other areas of business, science, and engineering a lot of data is available as time series data sets. In this course, students will study the statistical tools that are used to analyse such data and apply them to real world data with the help of the statistical software R. First, students will engage in reviewing basic stochastic process and time series concepts. Then, they will expand their knowledge on ARMA models together with estimation methods for the models and properties of their forecasts, as well as the GARCH model for modelling variation in error variances. Second, students will engage in recurrent neural networks for time series forecast. Throughout the course, students will focus on analysis of data using the taught methods with R software."
     },
     {
       "code": "DSC6013",
@@ -175,7 +183,8 @@
         "capacity": "250",
         "medium": "English"
       },
-      "section_count": 1
+      "section_count": 1,
+      "description": "Innovation of technologies are transforming the ﬁnancial services industry disruptively in realms of consumer ﬁnancial services, including mobile payments, foreign exchange, marketplace lending, saving and investing, ﬁnancial advice (robo- advisers), and personalized insurance. This course aims to understand the economic and technological forces driving this change in areas such aspayments, ﬁnancing, investments, and insurance. We will ﬁrst review fundamental concepts and models of ﬁnancial engineering, and then centre around selected cases with industrial applications and study selected academic papers in order to understand the underlying economics, the technology, and the research matters. The course intends to be interactive, including classroom discussion, lectured cases, group projects, and possibly guest speakers."
     },
     {
       "code": "DSC6016",
@@ -193,7 +202,8 @@
         "capacity": "200",
         "medium": "English"
       },
-      "section_count": 1
+      "section_count": 1,
+      "description": "This course focuses on the application of predictive analytics to ﬁnancial data. We will review some central tools used in economic and ﬁnancial forecasting, including predictive regressions, time series models, variable and model selection, forecast combinations, shrinkage methods, and vector autoregression. We will explore how these tools can be applied to predict the returns to ﬁnancial assets, including global equities and commodities, paying special attention to the diﬀerent types of forecasts - point forecast, interval forecast, or density forecast. We will also introduce modern predictive methods, such as penalized regressions and neural networks, and their applications to making predictions in ﬁnancial markets. Students are expected to gain working knowledge of how to apply predictive analytics to economics and ﬁnancial problems."
     },
     {
       "code": "DSC6017",
@@ -211,7 +221,8 @@
         "capacity": "0",
         "medium": "English"
       },
-      "section_count": 0
+      "section_count": 0,
+      "description": "In this course, each student will work in an industrial/research setting under the joint supervision of a CityUHK faculty member and an external industry/research supervisor* at a local/overseas host institution. Each student will gain hands- on experience in tackling challenging data science problems in an industry/business/research area of his/her choice. Speciﬁcally, this course aims to cultivate each student's ability to independently formulate and solve real data science problems in an application area of his/her choice, and it also aims to develop each student's data science skills and knowledge further in the application area of his/her choice. The course provides a platform for students to demonstrate their ability to innovatively apply data science theories and methods they learnt in classrooms, or develop new data science theories and methods to solve complex real-world problems. Students are expected to independently apply or develop advanced data science theories and methods to solve signiﬁcant real-world problems in the course. *If the internship position is an internal one (i.e., at CityUHK), then an external industry/research supervisor is not needed."
     },
     {
       "code": "DSC6018",
@@ -229,7 +240,8 @@
         "capacity": "200",
         "medium": "English"
       },
-      "section_count": 1
+      "section_count": 1,
+      "description": "In this course, students will analyze various types of medical and healthcare data using advanced analytical techniques. Key topics include healthcare data structures, medical image analysis, text analysis of clinical documents, trial data analysis, claims data, electronic health record (EHR) analysis, wearable device data processing, and health economics. Students will explore a range of statistical and computational methods, including machine learning, natural language processing, and predictive modeling, to extract meaningful insights from complex datasets. Real-world case studies will be utilized to demonstrate the practical applications of these methods in medicine and public health. By the end of the course, students will have developed the skills necessary to eﬀectively analyze medical data, interpret results, and apply methodologies across various healthcare domains, enabling them to address pressing challenges in the ﬁeld."
     },
     {
       "code": "CS5285",
@@ -247,7 +259,14 @@
         "capacity": "235",
         "medium": "English"
       },
-      "section_count": 2
+      "section_count": 2,
+      "description": "The course aims to provide an understanding of cybersecurity, giving an overview of the requirements and means for the protection of information and transactions, which is an essential feature in the design of any system. The course also examines a range of security considerations and design issues that are incorporated into the design, development and management of secure systems, including systems for eCommerce."
     }
-  ]
+  ],
+  "description_source": {
+    "source": "CityU 官方课程大纲 PDF（Course Abstract）",
+    "url_template": "https://www.cityu.edu.hk/pg/202627/course/{code}.pdf",
+    "note": "课程介绍完全基于官网课程 PDF 中的 Abstract 原文，未做改写。",
+    "added_at": "2026-08-17"
+  }
 }
